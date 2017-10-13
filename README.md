@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-[TODO. There will be project description]
+A small script that enables you to watch list of your VK online friends, without visiting the site.
 
 # How to Install
 
@@ -11,6 +11,20 @@ pip install -r requirements.txt # alternatively try pip3
 ```
 
 Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclopedia/pip/pip_virtualenv/) for better isolation.
+
+# How to use
+
+A launching on Linux
+```bash
+$ python vk_friends_online.py
+Login: <your login>
+Password: <your password>
+These friends are currently online:
+Harry Potter
+Severus Snape
+```
+
+The launching on Windows is similar.
 
 # Project Goals
 
