@@ -14,7 +14,10 @@ Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclop
 
 # How to use
 
-Before you run the script, you have to set ONLINE_WATCHER_VK_ID environment variable.
+### Preparing
+Before you run the script, you have to set **_ONLINE_WATCHER_VK_ID_** environment variable.
+
+### Example
 
 A launching on Linux
 ```bash
