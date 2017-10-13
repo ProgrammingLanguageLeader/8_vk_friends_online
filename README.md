@@ -14,6 +14,8 @@ Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclop
 
 # How to use
 
+Before you run the script, you have to set ONLINE_WATCHER_VK_ID environment variable.
+
 A launching on Linux
 ```bash
 $ python vk_friends_online.py
