@@ -14,7 +14,7 @@ Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclop
 
 # How to use
 
-### Preparing
+### Preparation
 Before you run the script, you have to set **_ONLINE_WATCHER_VK_ID_** environment variable.
 
 ### Example
