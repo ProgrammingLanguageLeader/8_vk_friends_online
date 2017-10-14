@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-A small script that enables you to watch list of your VK online friends, without visiting the site.
+A small script that enables you to watch a list of your VK friends which are currently online without visiting the site.
 
 # How to Install
 
