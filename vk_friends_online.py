@@ -1,4 +1,5 @@
 import vk
+import vk.exceptions
 import getpass
 import os
 
@@ -45,5 +46,5 @@ if __name__ == '__main__':
         else:
             print('These friends are currently online:')
             output_friends_online(friends_online)
-    except Exception as e:
-        exit(e)
+    except vk.exceptions.VkAuthError:
+        exit('Authorization error')
