@@ -6,7 +6,7 @@ A small script that enables you to watch list of your VK online friends, without
 
 Python 3 should be already installed. Then use pip (or pip3 if there is a conflict with old Python 2 setup) to install dependencies:
 
-```bash
+```#!bash
 pip install -r requirements.txt # alternatively try pip3
 ```
 
@@ -17,11 +17,19 @@ Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclop
 ### Preparation
 Before you run the script, you have to set **_ONLINE_WATCHER_VK_ID_** environment variable.
 
+Example of setting environment variable on Linux
+```#!bash
+$ export ONLINE_WATCHER_VK_ID=<your application ID>
+```
+
+To get an application ID visit the [Developers](https://vk.com/dev) VK page
+
 ### Example
 
 A launching on Linux
 ```bash
-$ python vk_friends_online.py
+# possibly requires call of python3 executive instead of just python
+$ python vk_friends_online.py 
 Login: <your login>
 Password: <your password>
 These friends are currently online:

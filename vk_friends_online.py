@@ -7,8 +7,7 @@ def get_application_id():
     return os.environ.get('ONLINE_WATCHER_VK_ID')
 
 
-def get_online_friends(login, password):
-    app_id = get_application_id()
+def get_online_friends(app_id, login, password):
     session = vk.AuthSession(
         app_id=app_id,
         user_login=login,
@@ -16,9 +15,7 @@ def get_online_friends(login, password):
         scope='friends'
     )
     api = vk.API(session)
-    friend_ids = api.friends.getOnline(
-        fields=['first_name', 'last_name']
-    )
+    friend_ids = api.friends.getOnline()
     friends = api.users.get(
         user_ids=friend_ids
     )
@@ -36,14 +33,17 @@ def output_friends_online(friends_data):
 
 
 if __name__ == '__main__':
+    app_id = get_application_id()
+    if not app_id:
+        exit('Please, set the ONLINE_WATCHER_VK_ID environment variable')
     login = input('Login: ')
     password = getpass.getpass(prompt='Password: ')
     try:
-        friends_online = get_online_friends(login, password)
+        friends_online = get_online_friends(app_id, login, password)
         if not friends_online:
             print('There are no any friend currently online')
         else:
             print('These friends are currently online:')
             output_friends_online(friends_online)
-    except vk.AuthSession:
-        exit('Authentication error')
+    except Exception as e:
+        exit(e)
